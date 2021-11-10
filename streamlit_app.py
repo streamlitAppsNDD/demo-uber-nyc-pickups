@@ -5,8 +5,19 @@ components.html(f'<script async defer data-website-id="bd4bc597-839f-4f88-8c86-6
 import streamlit as st
 
 # Track custom event:
+
+# <script>umami({name});</script>
 def track(name):  
-    st.markdown(f'<script>umami({name});</script>', unsafe_allow_html=True)
+    st.markdown(
+        f'''
+            <p id="demo"></p>
+
+            <script>
+            document.getElementById("demo").innerHTML = 5 + 6;
+            </script>
+        ''',
+        unsafe_allow_html=True
+    )
 
 st.button("Click to track", key=None, on_click=track, args=("button click",))
 

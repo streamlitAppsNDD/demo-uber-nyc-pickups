@@ -10,13 +10,17 @@ import streamlit as st
 def track(name):  
     st.markdown(
         f'''
-            <p id="demo"></p>
+            const button = document.getElementById('signup-button');
 
-            <script>
-            document.getElementById("demo").innerHTML = 5 + 6;
-            </script>
+            button.onclick = () => umami('Signup button click mark');
         ''',
         unsafe_allow_html=True
+    )
+
+    components.html(
+        '''
+            <button id="signup-button" class="button umami--click--signup-button">Sign up</button>
+        '''
     )
 
 st.button("Click to track", key=None, on_click=track, args=("button click",))

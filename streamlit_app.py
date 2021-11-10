@@ -9,9 +9,7 @@ def track(name):
     components.html(
     f'''
         <script language="javascript">
-            alert("Streamlit runs JavaScript");
-            umami({name});
-            umami.trackEvent('Signup button click', 'signup', '/home', 'bd4bc597-839f-4f88-8c86-61b5785b8e03');
+            window.frames[0].umami({name});
         </script>
     '''
 )

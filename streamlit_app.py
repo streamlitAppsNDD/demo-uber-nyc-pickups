@@ -10,7 +10,6 @@ def track(name):
     f'''
         <script language="javascript">
             window.frames[0].umami("{name}");
-            window.frames[1].umami("{name}2");
         </script>
     '''
 )

@@ -6,25 +6,17 @@ import streamlit as st
 
 # Track custom event:
 
-# <script>umami({name});</script>
+# 
 def track(name):  
-    pass
+    components.html(
+    f'''
+        <script>
+            umami({name});
+            umami.trackEvent('Signup button click', 'signup', '/home', '94db1cb1-74f4-4a40-ad6c-962362670409');
+        </script>
+    '''
+)
 
 st.button("Click to track", key=None, on_click=track, args=("button click",))
 
 st.write("Streamlit and Umami integration demo.")
-
-st.markdown(
-    f'''
-        const button = document.getElementById('signup-button');
-
-        button.onclick = () => umami('Signup button click mark');
-    ''',
-    unsafe_allow_html=True
-)
-
-components.html(
-    '''
-        <button id="signup-button" class="button umami--click--signup-button">Sign up</button>
-    '''
-)

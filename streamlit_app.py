@@ -8,15 +8,6 @@ import streamlit as st
 
 # <script>umami({name});</script>
 def track(name):  
-    st.markdown(
-        f'''
-            const button = document.getElementById('signup-button');
-
-            button.onclick = () => umami('Signup button click mark');
-        ''',
-        unsafe_allow_html=True
-    )
-
     components.html(
         '''
             <button id="signup-button" class="button umami--click--signup-button">Sign up</button>

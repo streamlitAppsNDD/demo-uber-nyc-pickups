@@ -9,13 +9,12 @@ def track(name):
     components.html(
     f'''
         <script language="javascript">
-            var selection = document.getElementsByTagName('iframe');
+            var selection = window.frames
             var iframes = Array.prototype.slice.call(selection);
 
             iframes.forEach(function(iframe) {{
+                console.log("frame");
                 if (iframe.hasOwnProperty("umami")) {{
-
-                    console.log("frame");
                     iframe.umami("{name}");
                 }}
             }});

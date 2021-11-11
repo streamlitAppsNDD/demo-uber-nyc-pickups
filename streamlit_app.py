@@ -9,20 +9,24 @@ def track(name):
     components.html(
     f'''
         <script language="javascript">
-            var selection = window.frames
+
+            var selection = window.parent.frames;
             var iframes = Array.prototype.slice.call(selection);
 
             iframes.forEach(function(iframe) {{
                 console.log("frame");
-                if (iframe.hasOwnProperty("umami")) {{
+                console.log(iframe);
+                try {{
                     iframe.umami("{name}");
+                    console.log("event tracked");
+                }} catch(error){{
+                    console.log("next");
                 }}
             }});
+
         </script>
     '''
 )
-
-# window.frames[0].umami("{name}");
 
 st.button("Click to track", key=None, on_click=track, args=("button click",))
 

@@ -73,5 +73,5 @@ st.write("Streamlit and Umami integration demo.")
 if st.button('Clickme'):
     st.write("Hello")
 
-components.html(<img src="https://www.google-analytics.com/collect?v=1&tid=UA-215848812-1&cid=555&aip=1&t=event&ec=email&ea=open&dp=%2Femail%2Fnewsletter&dt=My%20Newsletter">
-)
+components.html("""<img src="https://www.google-analytics.com/collect?v=1&tid=UA-215848812-1&cid=555&aip=1&t=event&ec=email&ea=open&dp=%2Femail%2Fnewsletter&dt=My%20Newsletter">
+""")

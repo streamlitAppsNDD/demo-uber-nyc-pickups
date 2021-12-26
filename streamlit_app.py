@@ -1,6 +1,13 @@
 # Added to as an example of how to track your app using Umami
 import streamlit as st
 import streamlit.components.v1 as components
+max_width = 3000
+padding_top = 10
+padding_right = 5
+padding_left = 5
+padding_bottom = 10
+COLOR = 'black'
+BACKGROUND_COLOR = 'white'
 st.markdown(
         f"""
 <style>

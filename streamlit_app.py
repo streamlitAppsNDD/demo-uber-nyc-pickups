@@ -39,7 +39,16 @@ code = """<!-- Global site tag (gtag.js) - Google Analytics -->
 
   gtag('config', 'G-YG9L2B01SW');
 </script>"""
+code = """<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-215848812-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-215848812-1');
+</script>
+"""
 a=os.path.dirname(st.__file__)+'/static/index.html'
 with open(a, 'r') as f:
     data=f.read()

@@ -2,6 +2,15 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-components.html(f'<script async defer data-website-id="1282b964-ba71-4b0c-bae8-ac58fe2d1dd3" src="https://umami-production-7628.up.railway.app/umami.js"></script>')
+components.html(f'<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PLZC4XB4D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1PLZC4XB4D');
+</script>')
 
 st.write("Streamlit and Umami integration demo.")
+

@@ -66,9 +66,12 @@ google_analytics_js = """<!-- Global site tag (gtag.js) - Google Analytics -->
 
   gtag('config', 'G-YG9L2B01SW');
 </script>"""
-# components.html(google_analytics_js)
+
 # components.html(f"<!-- Global site tag (gtag.js) - Google Analytics --> <script async src='https://www.googletagmanager.com/gtag/js?id=G-1PLZC4XB4D'></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1PLZC4XB4D');</script>")
 
 st.write("Streamlit and Umami integration demo.")
 if st.button('Clickme'):
     st.write("Hello")
+
+components.html(<img src="https://www.google-analytics.com/collect?v=1&tid=UA-215848812-1&cid=555&aip=1&t=event&ec=email&ea=open&dp=%2Femail%2Fnewsletter&dt=My%20Newsletter">
+)

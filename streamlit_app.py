@@ -1,5 +1,6 @@
 # Added to as an example of how to track your app using Umami
 import streamlit as st
+import os
 import streamlit.components.v1 as components
 max_width = 3000
 padding_top = 10

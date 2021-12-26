@@ -2,7 +2,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-components.html(f'<!-- Global site tag (gtag.js) - Google Analytics -->
+components.html(f"""<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PLZC4XB4D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,7 +10,7 @@ components.html(f'<!-- Global site tag (gtag.js) - Google Analytics -->
   gtag('js', new Date());
 
   gtag('config', 'G-1PLZC4XB4D');
-</script>')
+</script>""")
 
 st.write("Streamlit and Umami integration demo.")
 

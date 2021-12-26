@@ -52,8 +52,8 @@ code = """<!-- Global site tag (gtag.js) - Google Analytics -->
 a=os.path.dirname(st.__file__)+'/static/index.html'
 with open(a, 'r') as f:
     data=f.read()
-    # if len(re.findall('G-', data))==0:
-    with open(a, 'w') as ff:
+    if len(re.findall('UA-', data))==0 and len(re.findall('G-', data))==0:
+        with open(a, 'w') as ff:
             newdata=re.sub('<head>','<head>'+code,data)
             ff.write(newdata)
             

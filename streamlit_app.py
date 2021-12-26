@@ -2,7 +2,7 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-google_tag = """<!-- Global site tag (gtag.js) - Google Analytics -->
+google_analytics_js = """<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG9L2B01SW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

@@ -49,13 +49,13 @@ code = """<!-- Global site tag (gtag.js) - Google Analytics -->
   gtag('config', 'UA-215848812-1');
 </script>
 """
-a=os.path.dirname(st.__file__)+'/static/index.html'
-with open(a, 'r') as f:
-    data=f.read()
-    if len(re.findall('UA-', data))==0 and len(re.findall('G-', data))==0:
-        with open(a, 'w') as ff:
-            newdata=re.sub('<head>','<head>'+code,data)
-            ff.write(newdata)
+# a=os.path.dirname(st.__file__)+'/static/index.html'
+# with open(a, 'r') as f:
+#     data=f.read()
+#     if len(re.findall('UA-', data))==0 and len(re.findall('G-', data))==0:
+#         with open(a, 'w') as ff:
+#             newdata=re.sub('<head>','<head>'+code,data)
+#             ff.write(newdata)
             
 google_analytics_js = """<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YG9L2B01SW"></script>
